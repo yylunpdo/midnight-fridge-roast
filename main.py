@@ -8,12 +8,13 @@ Standard library only. Fully deterministic: the same line every run.
 import os
 
 ROAST = (
-    "2 a.m., starving, and my fridge flashes 'closed' like a bouncer "
-    "— it guards my leftovers all night, then hums like it did me a favour."
+    "2 a.m., starving, and my fridge flashes 'closed' like a nightclub "
+    "bouncer — it guards my leftovers all night, then hums like it did me a favour."
 )
 
 
 def main() -> None:
+    # Gate from the kit: 1-200 characters, a single line, no padding.
     text = ROAST.strip()
     assert 1 <= len(text) <= 200, f"roast length {len(text)} out of range"
     assert "\n" not in text, "roast must be a single line"
